@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{animal.name}}</h5>
+        <h6 class="card-title">{{animal.family.name}}</h6>
+        <p class="card-text">{{animal.height}}</p>
+        <a href="{% url 'all_animals'%}" class="card-link">back to all animals</a>
+    </div>
+</div>
+
+
+</div>
+{% endblock %}

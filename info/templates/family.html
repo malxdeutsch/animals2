@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{family.name}}</h5>
+        {% for animal in family.animal_set.all %}
+        <p class="card-text">{{animal}}</p>
+        {% endfor %}
+        <a href="{% url 'all_animals'%}" class="card-link">back to all animals</a>
+    </div>
+</div>
+
+
+</div>
+{% endblock %}

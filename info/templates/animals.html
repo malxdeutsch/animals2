@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    {% for animal in all_animals %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{animal.name}}</h5>
+            <h6 class="card-title">{{animal.family.name}}</h6>
+            <p class="card-text">{{animal.height}}</p>
+            <a href="{% url 'animal' animal.id %}" class="card-link">go to animal</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
